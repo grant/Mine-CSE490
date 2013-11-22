@@ -27,7 +27,8 @@ $(function() {
 		$('#home').fadeOut(fadeTime);
 		$('#analytics').fadeOut(fadeTime);
 		$('#create').fadeOut(fadeTime);
-		$('#' + name).fadeIn(fadeTime);
+
+		$('#' + name).delay(fadeTime).fadeIn(fadeTime);
 	}
 
 	setup();

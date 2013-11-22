@@ -1,9 +1,12 @@
+.leftArea, .rightArea {
+	height: 100%;
+	float: left;
+}
+
 .leftArea {
 	width: 20%;
-	height: 100%;
 	background-color: rgb(233,71,69);
 }
 .rightArea {
 	width: 80%;
-	height: 100%;
 }

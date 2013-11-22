@@ -42,6 +42,10 @@ h1 {
 	height: calc(100% - 20px);
 }
 
+#create, #analytics, #home {
+	height: 100%;
+}
+
 /* Menu */
 .menu-btns {
 	max-width: 300px;
