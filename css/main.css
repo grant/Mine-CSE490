@@ -37,10 +37,10 @@ h1 {
 
 /* Content */
 .content {
-	text-align: center;
-	margin: 0 auto;
+	height: calc(100% - 20px);
 }
 
+/* Menu */
 .menu-btns {
 	max-width: 300px;
 	padding: 10px;
