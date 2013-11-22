@@ -10,8 +10,8 @@ html, body {
 	background-color: rgb(233,71,69);
 }
 .logo {
-	padding-top: 40px;
-	padding-bottom: 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
 	width: 200px;
 	height: 200px;
 }
@@ -27,7 +27,7 @@ h1 {
 }
 
 .demo-logo small {
-	color: rgba(52, 73, 94, 0.3);
+	color: rgba(52, 73, 94);
 	display: block;
 	font-size: 22px;
 	font-weight: 700;
