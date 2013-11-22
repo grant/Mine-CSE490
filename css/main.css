@@ -37,6 +37,8 @@ h1 {
 
 /* Content */
 .content {
+	height: -moz-calc(100% - 20px);
+	height: -webkit-calc(100% - 20px);
 	height: calc(100% - 20px);
 }
 
