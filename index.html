@@ -33,15 +33,15 @@
 			</ul>
 		</div>
 		<div id="analytics">
-			Analytics
 			<div class="leftArea">
 				<ul class="campaignList">
-					<li>Campaign 1</li>
-					<li>Campaign 2</li>
+					<li id="campaign1">Campaign 1</li>
+					<li id="campaign2">Campaign 2</li>
 				</ul>
 			</div>
 			<div class="rightArea">
 				<div class="pictureArea">
+					<div class="vizArea"></div>
 				</div>
 			</div>
 		</div>
@@ -59,10 +59,15 @@
 			<div class="rightArea">
 				<div class="pictureArea">
 					<div class="upperPicArea">
-						<img id='uploadedPic' src="img/temp.jpg" alt="">
+						<img id='uploadedPic'>
 					</div>
 					<div class="lowerPicArea">
-						<input type="text" placeholder="Enter something" class="form-control" />
+						<div class="campaignPicArea">
+							<input type="text" placeholder="Campaign name" class="form-control" />
+							<a href="#" id="createCampaign">
+								<button class="btn btn-primary">Add to campaign</button>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

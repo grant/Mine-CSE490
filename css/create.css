@@ -16,14 +16,14 @@
 }
 
 
-/* Picture tpart */
+/* Picture part */
 #uploadedPic {
 	height: 100%;
+	visibility: hidden;
 }
 
-.picCenter {
-	margin: 0 auto;
-	height: 100%;
+.campaignPicArea {
+	visibility: hidden;
 }
 
 .pictureArea {
@@ -36,5 +36,7 @@
 }
 
 .lowerPicArea {
+	padding: 60px;
+	text-align: center;
 	height: 20%;
 }
