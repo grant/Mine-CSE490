@@ -28,6 +28,7 @@
 
 .pictureArea {
 	height: 100%;
+	overflow: scroll;
 }
 
 .upperPicArea {

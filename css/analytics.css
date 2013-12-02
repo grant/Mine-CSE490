@@ -19,3 +19,12 @@
 .tableauPlaceholder {
 	margin: auto;
 }
+
+.vizArea {
+	padding: 10px;
+}
+
+.vizFooter {
+	padding: 20px;
+	float: right;
+}
