@@ -12,7 +12,9 @@
 </head>
 <body>
 	<header>
-		<div class="topbanner"></div>
+		<a href="/">
+			<div class="topbanner"></div>
+		</a>
 	</header>
 	<div class="content">
 		<div id="home">
@@ -25,6 +27,9 @@
 			<ul class="menu-btns">
 				<li class="analyticsBtn"><button class="btn btn-danger menu-btn">Campaign Analytics</button></li>
 				<li class="createBtn"><button class="btn btn-danger menu-btn">Create Ad</button></li>
+				<button class="btn menu-btn">Ad Personalization Manager</button>
+				<button class="btn menu-btn">Campaign Manager</button>
+				<button class="btn menu-btn">Promotional Manager</button>
 			</ul>
 		</div>
 		<div id="analytics">
@@ -33,22 +38,33 @@
 				<ul class="campaignList">
 					<li>Campaign 1</li>
 					<li>Campaign 2</li>
-					<li>Campaign 3</li>
-					<li>Campaign 4</li>
-					<li>Campaign 5</li>
 				</ul>
 			</div>
 			<div class="rightArea">
-				<div class="pictureArea"></div>
+				<div class="pictureArea">
+				</div>
 			</div>
 		</div>
 		<div id="create">
 			<div class="leftArea">
 				<ul class="pictureList">
+					<form>
+						<a id='picUpload' href='#'>
+							<button class="btn btn-primary" style="width:100%;padding:20px;">Upload picture</button>
+						</a>
+						<input id='fileUpload' type="file"/>
+					</form>
 				</ul>
 			</div>
 			<div class="rightArea">
-				<div class="pictureArea"></div>
+				<div class="pictureArea">
+					<div class="upperPicArea">
+						<img id='uploadedPic' src="img/temp.jpg" alt="">
+					</div>
+					<div class="lowerPicArea">
+						<input type="text" placeholder="Enter something" class="form-control" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

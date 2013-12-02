@@ -10,3 +10,31 @@
 .rightArea {
 	width: 80%;
 }
+
+#fileUpload {
+	visibility: hidden;
+}
+
+
+/* Picture tpart */
+#uploadedPic {
+	height: 100%;
+}
+
+.picCenter {
+	margin: 0 auto;
+	height: 100%;
+}
+
+.pictureArea {
+	height: 100%;
+}
+
+.upperPicArea {
+	text-align: center;
+	height: 80%;
+}
+
+.lowerPicArea {
+	height: 20%;
+}
