@@ -19,6 +19,7 @@ $(function() {
 		$('.analyticsBtn').click(function() {
 			show('analytics');
 			loadViz1();
+			$('.pictureArea').css('display', 'block');
 		});
 
 
