@@ -2,9 +2,9 @@ $(function() {
 	var PREFIX = "img/uploads/";
 	var FADE_DURATION = 200;
 
-	var campaigns = [{
-
-	}];
+	var points = [];
+	var currentPoint = {};
+	var hasPoint = false;
 
 	function setup () {
 		show('home', 0);
@@ -25,18 +25,79 @@ $(function() {
 		// Uploading a pic
 		$("a#picUpload").bind('click', function() {
 			$(":input[type=file]").click();
-			$('.campaignPicArea').css('visibility', 'hidden');
 			return false;
 		});
 
 		$('#fileUpload').change(function() {
 			var fullPath = getFullPath();
-			$('.campaignPicArea').css('visibility', 'visible');
-			$('#uploadedPic').css('visibility', 'visible').attr('src', fullPath);
+			$('.pictureArea').css('display', 'block');
+			$('#uploadedPic').attr('src', fullPath);
+			$('.pointInput').css('display', 'none');
+			$('.campaignInput').css('display', 'block');
 		});
 
-		$('#uploadedPic').click(function() {
-			console.log('clicked');
+		$('.uploadedPicArea').click(function(event) {
+			$('.pointInput').css('display', 'block');
+			$('.campaignInput').css('display', 'none');
+
+			var $this = $(this);
+			var offset = $(this).offset();
+
+			var width = $this.width();
+			var height = $this.height();
+			var x = event.clientX - offset.left;
+			var y = event.clientY - offset.top;
+
+			var fracX = (x/width)*100;
+			var fracY = (y/height)*100;
+			var percentX = fracX + '%';
+			var percentY = fracY + '%';
+
+			// check if percent is near
+			var isNear = false;
+			for (var i = 0; i < points.length; ++i) {
+				var pointX = parseFloat(points[i].x.substring(0, points[i].x.length - 1));
+				var pointY = parseFloat(points[i].y.substring(0, points[i].y.length - 1));
+				var dist = Math.sqrt(Math.pow(pointX - fracX, 2) + Math.pow(pointY - fracY, 2));
+				alert(dist);
+				if (dist < 3) {
+					window.location.href = points[i].url;
+				}
+			}
+
+			if (!isNear && !hasPoint) {
+				var img = $('<img>'); //Equivalent: $(document.createElement('img'))
+				img.attr('src', 'img/target-red.png');
+				img.addClass('point');
+				img.css({
+					left: percentX,
+					top: percentY
+				});
+				img.appendTo($('.points'));
+
+				currentPoint = {
+					x: percentX,
+					y: percentY
+				};
+				hasPoint = true;
+			}
+		});
+
+		$('#confirmPoint').click(function() {
+			hasPoint = false;
+			$('.pointInput').css('display', 'none');
+			$('.campaignInput').css('display', 'block');
+
+			var url = $('#url').val();
+			var campaignName = $('#campaignName').val();
+			currentPoint.url = url;
+
+			// Add the point to the list
+			points.push(currentPoint);
+
+			// Reset input boxes
+			$('#url').val('');
+			$('#campaignName').val('');
 		});
 
 		$('#campaign1').click(function() {

@@ -60,14 +60,26 @@
 			<div class="rightArea">
 				<div class="pictureArea">
 					<div class="upperPicArea">
-						<img id='uploadedPic'>
+						<div class="uploadedPicArea">
+							<div class="points">
+								<img src="img/target-red.png" style="top:20%;left:40%;width:20px;height:20px;position:absolute;">
+							</div>
+							<img id='uploadedPic'>
+						</div>
 					</div>
 					<div class="lowerPicArea">
 						<div class="campaignPicArea">
-							<input type="text" placeholder="Campaign name" class="form-control" />
-							<a href="#" id="createCampaign">
-								<button class="btn btn-primary">Add to campaign</button>
-							</a>
+							<div class="pointInput">
+								<input id="url" type="text" placeholder="URL" class="form-control" />
+								<input id="campaignName" type="url" placeholder="Product name" class="form-control" />
+								<button id="confirmPoint" class="btn btn-primary">Confirm Point</button>
+							</div>
+							<div class="campaignInput">
+								<input type="text" placeholder="Campaign name" class="form-control" />
+								<a href="#" id="createCampaign">
+									<button class="btn btn-primary">Add to campaign</button>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
